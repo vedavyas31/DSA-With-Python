@@ -1,0 +1,68 @@
+# ARRAYS INTRO
+
+Arrays are one of the most commonly used data structures. These are also called Lists in Python. 
+Arrays stores data sequentially in memory and hence they have the smallest possible footprint. 
+Arrays assign an index starting from 0 to each element sequentially. We can search for elements 
+using the index of element. 
+
+Common operations done on Array - 
+# 1. LOOKUP - O(1) Time Complexity
+# 2. PUSH - O(1)  Time Complexity
+# 3. INSERT - O(n)  Time Complexity
+# 4. DELETE - O(n)  Time Complexity
+
+
+
+--LOOKUP--
+Lookup in arrya is very fast. 
+fruits = ['apple', 'banana', 'strawberry', 'pineapple']
+Index		0		  1			  2				3
+
+When we store an array computer registers the memory address of this array and since the 
+elements are stored as a sequence, our computers know where each index is stored and it is 
+easy to retrieve elements based on index. 
+fruits[2] will directly fetch the 3rd element. 
+
+
+===========================================================================================
+
+
+--PUSH--
+Push is also very fast as we are basically adding an element at the end of the list. 
+As our computers already know where the last element is PUSH operation is very fast. 
+
+fruits.append('water melon')
+"water melon" will be added at the end of the list with index 4. 
+
+
+===========================================================================================
+
+
+--INSERT--
+Insert is O(n) in the worst case. Insert will involve reassigning indexes. 
+
+fruits = ['apple', 'banana', 'strawberry', 'pineapple']
+fruits.insert(1, 'orange')
+
+fruits = ['apple', 'orange', 'banana', 'strawberry', 'pineapple']
+Index		0		  1			  2			3 			  4
+
+Indexes for 'banana', 'straberry' and 'pineapple' are recalculated. Worst case scenario is when we 
+insert an elementat the beginning of a list, then index is recalculated for all n elements.
+
+
+===========================================================================================
+
+
+--DELETE--
+Delete involves similar logic where if an element is deleted at a particular index, 
+then the index is recalculated for rest of the elements. 
+
+fruits = ['apple', 'orange', 'banana', 'strawberry', 'pineapple']
+Index		0		  1			  2			3 			  4
+
+fruits.pop(0)
+
+fruits = [ 'orange', 'banana', 'strawberry', 'pineapple']
+Index		 0			1			2 			  3
+
